@@ -308,7 +308,21 @@ def average(number_list):
     this raises an error when given an empty list.
     """
 
-    return 0
+    if len(number_list) == 0:
+        return "That list is empty!"
+
+    # same caveat with the 'else' as above
+    else:
+        return (float(sum_numbers(number_list)) / len(number_list))
+
+        # again, don't know if that's cheating, so...
+
+        # running_total = 0
+
+        # for num in number_list:
+        #     running_total += num
+
+        # return (float(running_total) / len(number_list))
 
 
 #############################################################################
