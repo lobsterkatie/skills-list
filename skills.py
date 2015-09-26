@@ -70,7 +70,14 @@ def print_indeces(my_list):
 
     """
 
-    print "Nothing at all"
+    for i, item in enumerate(my_list):
+        print i, item
+
+    #not sure if using an enumeration is cheating, however, so if I were going
+    #to do it just with lists I'd go all Java on you and do:
+
+    # for i in range(len(my_list)):
+    #     print i, my_list[i]
 
 
 def long_words(word_list):
