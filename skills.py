@@ -257,7 +257,7 @@ def mult_numbers(number_list):
         # hey, it worked again!
         # but as before, if that's cheating, here you go:
 
-        # running_product = 0
+        # running_product = 1
 
         # for num in number_list:
         #     running_product *= num
@@ -268,7 +268,7 @@ def mult_numbers(number_list):
 def join_strings(word_list):
     """Return a string of all input strings joined together.
 
-    Python ha a built-in method on lists, `join` -- but this exercise, you
+    Python has a built-in method on lists, `join` -- but this exercise, you
     should not use it.
 
         >>> join_strings(["spam", "spam", "bacon", "balloonicorn"])
@@ -281,7 +281,21 @@ def join_strings(word_list):
 
     """
 
-    return "Not the right thing"
+    if len(word_list) == 0:
+        return ""
+
+    # same caveat with the 'else' as above
+    else:
+        return reduce(lambda x, y: x + y, word_list)
+
+        # cool! and here's the other version:
+
+        # german_word = ""  # because that's how they seem to make words
+
+        # for word in word_list:
+        #     german_word += word
+
+        # return german_word
 
 
 def average(number_list):
