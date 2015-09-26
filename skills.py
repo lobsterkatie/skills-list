@@ -91,7 +91,13 @@ def long_words(word_list):
 
     """
 
-    return ['the wrong thing']
+    at_least_five = []
+
+    for word in word_list:
+        if len(word) >= 5:
+            at_least_five.append(word)
+
+    return at_least_five
 
 
 def smallest_int(number_list):
