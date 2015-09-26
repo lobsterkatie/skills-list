@@ -113,7 +113,20 @@ def smallest_int(number_list):
 
     """
 
-    return 100
+    if len(number_list) == 0:
+        return None
+
+    # I get that an 'else' is not strictly necessary here (since this part of the
+    # code will never be hit if we're passed an empty list), but IMHO it makes it
+    # just a micron clearer/easier to read because the else makes that explicit
+    else:
+        smallest_so_far = number_list[0]
+
+        for num in number_list:
+            if num < smallest_so_far:
+                smallest_so_far = num
+
+        return smallest_so_far  # now smallest_over_all!
 
 
 def largest_int(number_list):
