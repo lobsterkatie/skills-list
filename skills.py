@@ -42,7 +42,13 @@ def all_even(number_list):
 
     """
 
-    return ['the wrong thing']
+    evens = []
+
+    for num in number_list:
+        if (num % 2) == 0:
+            evens.append(num)
+
+    return evens
 
 
 def print_indeces(my_list):
