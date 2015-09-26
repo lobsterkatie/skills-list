@@ -22,7 +22,13 @@ def all_odd(number_list):
 
     """
 
-    return ['the wrong thing']
+    odds = []
+
+    for num in number_list:
+        if (num % 2) == 1:
+            odds.append(num)
+
+    return odds
 
 
 def all_even(number_list):
