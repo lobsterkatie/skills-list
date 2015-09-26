@@ -142,7 +142,20 @@ def largest_int(number_list):
 
     """
 
-    return 0
+    if len(number_list) == 0:
+        return None
+
+    # I get that an 'else' is not strictly necessary here (since this part of the
+    # code will never be hit if we're passed an empty list), but IMHO it makes it
+    # just a micron clearer/easier to read because the else makes that explicit
+    else:
+        biggest_so_far = number_list[0]
+
+        for num in number_list:
+            if num > biggest_so_far:
+                biggest_so_far = num
+
+        return biggest_so_far  # now biggest_over_all!
 
 
 def halvesies(number_list):
