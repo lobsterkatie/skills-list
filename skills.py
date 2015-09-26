@@ -145,9 +145,7 @@ def largest_int(number_list):
     if len(number_list) == 0:
         return None
 
-    # I get that an 'else' is not strictly necessary here (since this part of the
-    # code will never be hit if we're passed an empty list), but IMHO it makes it
-    # just a micron clearer/easier to read because the else makes that explicit
+    # same caveat with the 'else' as above
     else:
         biggest_so_far = number_list[0]
 
@@ -212,7 +210,22 @@ def sum_numbers(number_list):
 
     """
 
-    return None
+    if len(number_list) == 0:
+        return 0
+
+    # same caveat with the 'else' as above
+    else:
+        return reduce(lambda x, y: x + y, number_list)
+
+        # hey, it worked! (to be fair, it's the example in the documentation)
+        # but again, if that's cheating, here you go:
+
+        # running_total = 0
+
+        # for num in number_list:
+        #     running_total += num
+
+        # return running_total
 
 
 def mult_numbers(number_list):
@@ -234,7 +247,22 @@ def mult_numbers(number_list):
 
     """
 
-    return None
+    if len(number_list) == 0:
+        return 1
+
+    # same caveat with the 'else' as above
+    else:
+        return reduce(lambda x, y: x * y, number_list)
+
+        # hey, it worked again!
+        # but as before, if that's cheating, here you go:
+
+        # running_product = 0
+
+        # for num in number_list:
+        #     running_product *= num
+
+        # return running_product
 
 
 def join_strings(word_list):
